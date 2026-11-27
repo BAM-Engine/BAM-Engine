@@ -17,14 +17,12 @@ Works:
 ########
 from pathlib import Path as ph
 import platform as pt
-import sys as sy
+#import sys as sy
 
 # Check version
-# For file creation means
-# linux: ~/Documents/BAM
-# Windows: C:/Users/{user}/Documents/BAM - May need to include OneDrive idk I don't use Microslop
 version = pt.system()
 release = pt.release()
+print(release)
 # Version is (may?) be irrelevant
 
 openProjects = []
@@ -34,7 +32,7 @@ def checkControl(version):
     with open(ph.home() / "Documents" / "BAMEngine" / "control.txt", "r") as f:
         contents = f.read()
         print(contents)
-        openProjects.append(f.readlines())
+        openProjects.append(contents)
         print(openProjects)
 
 if __name__ == "__main__":
