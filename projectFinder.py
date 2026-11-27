@@ -20,8 +20,10 @@ from pathlib import Path as ph
 import platform as pt
 #import sys as sy
 
-# Save directory
-# Where
+################
+# Read Profiles
+##############
+def readProfiles
 
 # Check version
 version = pt.system()
@@ -35,12 +37,14 @@ def checkControl(version):
     with open(ph.home() / "Documents" / "BAMEngine" / "control.txt", "r") as f:
         for line in f:
             openProjects.append(line.rstrip())
+    f.close()
     print(openProjects)
 
 # Refer to Works.
 def checkProjects(openProjects):
     for project in openProjects:
-        with open(ph.home)
+        with open() as f:
+            pass
 
 if __name__ == "__main__":
     print(f"Running: {version}")
