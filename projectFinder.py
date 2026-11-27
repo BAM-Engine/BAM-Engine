@@ -10,7 +10,7 @@ Works:
         specified file location (defaulting to the `Documents/` directory of your system).
         If that file cannot be found, it creates a new folder that is called `BAM` in the
         `Documents/` directory, along with the `control.txt` file.
-    2. Reads from
+    2. Reads from the Documents/ Folder
 """
 
 ##########
@@ -20,10 +20,6 @@ from pathlib import Path as ph
 import platform as pt
 #import sys as sy
 
-################
-# Read Profiles
-##############
-def readProfiles
 
 # Check version
 version = pt.system()
@@ -43,7 +39,7 @@ def checkControl(version):
 # Refer to Works.
 def checkProjects(openProjects):
     for project in openProjects:
-        with open() as f:
+        with open(ph.home() / "Documents" / "BAMEngine") as f:
             pass
 
 if __name__ == "__main__":

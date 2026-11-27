@@ -1,3 +1,7 @@
--- Profiles.txt
--- Gathers settings that parts of the engine use
+- Profiles.txt
+- Gathers settings that parts of the engine use
+
+- ControlPath: Dictates where projectFinder.py looks for projects
 controlPath: pt.home() / "Documents" / "BAMEngine" / "control.txt"
+
+- Hello there
