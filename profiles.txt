@@ -1,0 +1,3 @@
+-- Profiles.txt
+-- Gathers settings that parts of the engine use
+controlPath: pt.home() / "Documents" / "BAMEngine" / "control.txt"
