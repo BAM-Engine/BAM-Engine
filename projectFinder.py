@@ -15,6 +15,7 @@ Works:
 ##########
 # Modules
 ########
+from pathlib import Path as ph
 import platform as pt
 import sys as sy
 
@@ -26,15 +27,16 @@ version = pt.system()
 release = pt.release()
 # Version is (may?) be irrelevant
 
-# Refer to Works.1
-def checkControl():
-    global version
+openProjects = []
 
-    if version == "Linux":
-        with open("~/Documents/", "r") as f:
-            pass
-    elif version == "Windows":
-        pass # Figure it out.
+# Refer to Works.1
+def checkControl(version):
+    with open(ph.home() / "Documents" / "BAMEngine" / "control.txt", "r") as f:
+        contents = f.read()
+        print(contents)
+        openProjects.append(f.readlines())
+        print(openProjects)
 
 if __name__ == "__main__":
     print(f"Running: {version}")
+    checkControl(version)
