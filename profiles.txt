@@ -3,5 +3,3 @@
 
 - ControlPath: Dictates where projectFinder.py looks for projects
 controlPath: pt.home() / "Documents" / "BAMEngine" / "control.txt"
-
-- Hello there

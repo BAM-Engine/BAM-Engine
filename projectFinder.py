@@ -20,9 +20,12 @@ from pathlib import Path as ph
 import platform as pt
 #import sys as sy
 
+# Third Party
+import profilesReader as pr
+
 
 # Check version
-version = pt.system()
+os = pt.system()
 release = pt.release()
 version = pt.version()
 
@@ -39,10 +42,10 @@ def checkControl(version):
 # Refer to Works.
 def checkProjects(openProjects):
     for project in openProjects:
-        with open(ph.home() / "Documents" / "BAMEngine") as f:
-            pass
+        with open(ph.home() / "Documents" / "BAMEngine" / project / "project.bam", "w") as f:
+            print(f)
 
 if __name__ == "__main__":
     print(f"Running: {version}")
-    checkControl(version)
+    checkControl(os)
     checkProjects(openProjects)

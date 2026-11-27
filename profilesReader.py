@@ -3,20 +3,22 @@
 ##############
 def readProfiles(profileEntry):
     print(f"Searching for: {profileEntry}")
+    i = 0
 
     with open("profiles.txt", "r") as f:
         for line in f:
-            currentLine = line.rstrip()
+            print(line)
+            #currentLine = line.rstrip()
 
             # Filter out comments
             # Prefaced with "- "
-            currentArray = list(currentLine)
-            if currentArray[0] == "-":
-                print("Skipping comment")
+            currentArray = list(line)
+            print(currentArray)
+            if currentArray[0] == "-" or currentArray[0] == "\n":
+                print("Skipping comment or blankline (\\n)")
                 continue
             else:
-                print("Found line")
-                print(line)
+                print("Running Line: ")
 
 
 def writeProfiles(profileEntry, replaced):
