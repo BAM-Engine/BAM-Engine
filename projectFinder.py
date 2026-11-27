@@ -30,10 +30,9 @@ openProjects = []
 # Refer to Works.1
 def checkControl(version):
     with open(ph.home() / "Documents" / "BAMEngine" / "control.txt", "r") as f:
-        contents = f.read()
-        print(contents)
-        openProjects.append(contents)
-        print(openProjects)
+        for line in f:
+            openProjects.append(line.rstrip())
+    print(openProjects)
 
 if __name__ == "__main__":
     print(f"Running: {version}")
