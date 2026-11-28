@@ -2,6 +2,7 @@
 # Read Profiles
 ##############
 def readProfiles(profileEntry):
+    """Get the value of a profile"""
     print(f"Searching for: {profileEntry}")
 
     with open("profiles.txt", "r") as f:
@@ -20,6 +21,10 @@ def readProfiles(profileEntry):
                 focusLine = focusLine[0].split(sub)
                 if focusLine[0] == profileEntry:
                     print("Line FOUND!")
+                    print(f"Line Contents: {line}")
+                    contents = line.split(sub)[1]
+                    print(f"Compiled FocusLine: {contents}")
+                    return contents
                     break
                 else:
                     print(f"{focusLine[0]} != {profileEntry}")
@@ -31,4 +36,9 @@ def writeProfiles(profileEntry, replaced):
         pass
 
 if __name__ == "__main__":
-    readProfiles("themeMode") # Add more
+    print("""-----------------------
+- This is a TEST CALL -
+-----------------------
+- This call is not for running (hence the __name____main__ call)""")
+    test = readProfiles("test")
+    print(f"FOUND CALL: {test}")

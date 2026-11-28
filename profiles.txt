@@ -1,20 +1,26 @@
 - Profiles.txt
 - Gathers settings that parts of the engine use
 
+- No Spaces are in there because profilesReader.py reads from the : in the definitions
+
+- TEST CALL
+test:true
+- DO NOT ALTER
+
 - ControlPath: Dictates where projectFinder.py looks for projects
 - pt.home() => see projectFinder.py
-controlPath: pt.home() / "Documents" / "BAMEngine" / "control.txt"
+controlPath:ph.home() / "Documents" / "BAMEngine" / "control.txt"
 
 - THEMES
 - Where the user chooses what their engine looks like
 - Extremely customisable
 
-- Default is dark mode
-themeMode: Default
+- ENGINE THEMES
+- idk what to put here
 
 - SCRIPTING THEMES
 - Normal text, such as numbers
-scriptThemeText: #FFFFFF
+scriptThemeText:#FFFFFF
 
 - functions, returns, etc
-scriptThemeInitialiser: #7663FF
+scriptThemeInitialiser:#7663FF

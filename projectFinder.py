@@ -32,20 +32,29 @@ version = pt.version()
 openProjects = []
 
 # Refer to Works.1
+# WORK HERE
 def checkControl(version):
-    with open(ph.home() / "Documents" / "BAMEngine" / "control.txt", "r") as f:
+    path = eval(pr.readProfiles("controlPath").strip())
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.touch(exist_ok=True)
+
+    with open(path, "r") as f:
         for line in f:
             openProjects.append(line.rstrip())
-    f.close()
     print(openProjects)
 
-# Refer to Works.
+# Refer to Works.2
+"""
 def checkProjects(openProjects):
+    path = pr.readProfiles("controlPath")
+    print(type(path))
     for project in openProjects:
-        with open(ph.home() / "Documents" / "BAMEngine" / project / "project.bam", "w") as f:
+        with open(path, "w") as f:
             print(f)
+"""
 
 if __name__ == "__main__":
     print(f"Running: {version}")
     checkControl(os)
-    checkProjects(openProjects)
+    #checkProjects(openProjects)
