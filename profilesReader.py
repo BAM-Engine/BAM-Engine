@@ -14,8 +14,12 @@ def readProfiles(profileEntry):
             # Prefaced with "- "
             currentArray = list(line)
             print(currentArray)
-            if currentArray[0] == "-" or currentArray[0] == "\n":
-                print("Skipping comment or blankline (\\n)")
+            if currentArray[0] == "-" or currentArray[0] == "\n" or currentArray[0] == ";":
+                print("""Skipping from:
+                    - Comment (-)
+                    - Blankline (\\n)
+                    - Blanked Code (;)
+                    """)
                 continue
             else:
                 print(f"Running Line: {line}")

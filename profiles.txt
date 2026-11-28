@@ -2,4 +2,19 @@
 - Gathers settings that parts of the engine use
 
 - ControlPath: Dictates where projectFinder.py looks for projects
+- pt.home() => see projectFinder.py
 controlPath: pt.home() / "Documents" / "BAMEngine" / "control.txt"
+
+- THEMES
+- Where the user chooses what their engine looks like
+- Extremely customisable
+
+- Default is dark mode
+themeMode: Default
+
+- SCRIPTING THEMES
+- Normal text, such as numbers
+scriptThemeText: #FFFFFF
+
+- functions, returns, etc
+scriptThemeInitialiser: #7663FF
