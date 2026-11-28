@@ -18,7 +18,15 @@ def readProfiles(profileEntry):
                 print("Skipping comment or blankline (\\n)")
                 continue
             else:
-                print("Running Line: ")
+                print(f"Running Line: {line}")
+                focusLine = line.split()
+                print(f"Focused Line: {focusLine}")
+                if focusLine[0] == profileEntry:
+                    print("Line FOUND!")
+                    break
+                else:
+                    print(f"{focusLine[0]} != {profileEntry}")
+                    continue
 
 
 def writeProfiles(profileEntry, replaced):
@@ -26,4 +34,4 @@ def writeProfiles(profileEntry, replaced):
         pass
 
 if __name__ == "__main__":
-    readProfiles("blank") # Add more
+    readProfiles("controlPath") # Add more
